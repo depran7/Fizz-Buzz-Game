@@ -25,7 +25,7 @@ function fizzBuzz(angka) {
   } else if (angka % 5 === 0) {
     return "buzz";
   } else {
-    return angka;
+    return Number(angka).toString();
   }
 }
 function checkAnswer(jawaban) {
