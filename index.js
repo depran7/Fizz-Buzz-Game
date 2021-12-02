@@ -1,7 +1,7 @@
 let score = 0;
 let soal = 0;
 const form = document.forms["answer_form"];
-
+const timeLeftEl = document.getElementById("time_left");
 function randomSoal() {
   const question = document.getElementById("question");
   soal = Math.floor(Math.random() * 100);
@@ -42,12 +42,35 @@ function answerQuestion() {
     checkAnswer(form.answer.value);
   }, 100);
 }
+function gameOver() {
+  alert("Selesai 😎 score kamu " + score);
+  score = 0;
+  if (confirm("Mau main lagi?")) {
+    timeLeftEl.innerText = 10;
+    startGame();
+  }
+}
+// timeLeft 10 seconds
+function timeLeft() {
+  if (timeLeftEl.innerText > 0) {
+    timeLeftEl.innerText--;
+    setTimeout(timeLeft, 1000);
+  } else {
+    gameOver();
+  }
+}
+// end the game after 10 seconds
+function startGame() {
+  setScore();
+  randomSoal();
+
+  timeLeft();
+}
 
 for (const answerEl of form.answer) {
   answerEl.onclick = function () {
     answerQuestion();
-  }
+  };
 }
 
-setScore();
-randomSoal();
+startGame();
