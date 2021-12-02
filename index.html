@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fizz Buzz Game</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    /* label pointer */
+    .pointer {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center align-items-center">
+    <div class="w-50 text-center">
+      <div class="d-flex">
+        <h4>Score: <span id="score"></span></h4>
+      </div>
+      <h1>Fizz Buzz Game</h1>
+      <h2 class="m-5" id="question">3</h2>
+
+      <!-- buttons -->
+      <form class="d-flex flex-column flex-lg-row justify-content-around" name="answer_form" onsubmit="return false;">
+        <label class="text-left text-lg-center btn btn-primary pointer w-100 mx-1"><input type="radio" class="mx-1" name="answer"
+            value="1" /><span id="answer_as_soal"></span></label>
+        <label class="text-left text-lg-center btn btn-primary pointer w-100 mx-1"><input type="radio" class="mx-1" name="answer"
+            value="Fizz" />Fizz</label>
+        <label class="text-left text-lg-center btn btn-primary pointer w-100 mx-1"><input type="radio" class="mx-1" name="answer"
+            value="Buzz" />Buzz</label>
+        <label class="text-left text-lg-center btn btn-primary pointer w-100 mx-1"><input type="radio" class="mx-1" name="answer"
+            value="Fizz Buzz" />Fizz
+          Buzz</label>
+      </form>
+      <p>
+        <span class="text-danger">*</span>
+        <span>Pilih jawaban yang sesuai dengan jawaban yang diberikan</span>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- panduan paragrah untuk bermain fizz buzz -->
+  <nav class="navbar fixed-bottom navbar-light bg-light">
+    <p >
+      <div>
+        <span class="text-info">*Petunjuk:</span>
+        <span>Jika Kelipatannya 3 = <span class="text-success">Fizz</span></span>
+        <span>, Kelipatannya 5 = <span class="text-success">Buzz</span></span>
+        <span>, Kelipatannya 3 dan 5 = <span class="text-success">Fizz Buzz</span></span>
+        <span>, Jika tidak ada = <span class="text-success">angka(sesuai soal)</span></span>
+      </div>
+    </p>
+  </nav>
+  <script src="index.js"></script>
+</body>
+
+</html>
