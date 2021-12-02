@@ -29,8 +29,6 @@ function fizzBuzz(angka) {
   }
 }
 function checkAnswer(jawaban) {
-  console.log(jawaban);
-  console.log(soal);
   if (jawaban.toLowerCase() === fizzBuzz(soal)) {
     addScore();
     alert("uhuy benar 😍");

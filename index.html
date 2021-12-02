@@ -17,7 +17,16 @@
 </head>
 
 <body>
-  <div class="container d-flex justify-content-center align-items-center">
+  <!-- Link to repo Github  -->
+  <nav class="navbar fixed-top">
+    <a href="https://github.com/depran7/Fizz-Buzz-Game" target="_blank" class="ml-auto">
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github logo"
+        style="width: 60px; height: 60px;">
+    </a>
+  </nav>
+
+  <!-- Game -->
+  <div class="container pt-3 pt-sm-5 d-flex justify-content-center align-items-center">
     <div class="w-50 text-center">
       <div class="d-flex">
         <h4>Score: <span id="score"></span></h4>
@@ -27,19 +36,19 @@
 
       <!-- buttons -->
       <form class="d-flex flex-column flex-lg-row justify-content-around" name="answer_form" onsubmit="return false;">
-        <label class="text-left text-lg-center btn btn-primary pointer w-100 mx-1"><input type="radio" class="mx-1" name="answer"
-            value="1" /><span id="answer_as_soal"></span></label>
-        <label class="text-left text-lg-center btn btn-primary pointer w-100 mx-1"><input type="radio" class="mx-1" name="answer"
-            value="Fizz" />Fizz</label>
-        <label class="text-left text-lg-center btn btn-primary pointer w-100 mx-1"><input type="radio" class="mx-1" name="answer"
-            value="Buzz" />Buzz</label>
-        <label class="text-left text-lg-center btn btn-primary pointer w-100 mx-1"><input type="radio" class="mx-1" name="answer"
-            value="Fizz Buzz" />Fizz
+        <label class="text-left text-lg-center btn btn-primary pointer w-100 mx-1"><input type="radio" class="mx-1"
+            name="answer" value="1" /><span id="answer_as_soal"></span></label>
+        <label class="text-left text-lg-center btn btn-primary pointer w-100 mx-1"><input type="radio" class="mx-1"
+            name="answer" value="Fizz" />Fizz</label>
+        <label class="text-left text-lg-center btn btn-primary pointer w-100 mx-1"><input type="radio" class="mx-1"
+            name="answer" value="Buzz" />Buzz</label>
+        <label class="text-left text-lg-center btn btn-primary pointer w-100 mx-1"><input type="radio" class="mx-1"
+            name="answer" value="Fizz Buzz" />Fizz
           Buzz</label>
       </form>
       <p>
         <span class="text-danger">*</span>
-        <span>Pilih jawaban yang sesuai dengan jawaban yang diberikan</span>
+        <span>Jawaban ada dipetunjuk 😜</span>
       </p>
     </div>
 
@@ -47,7 +56,7 @@
 
   <!-- panduan paragrah untuk bermain fizz buzz -->
   <nav class="navbar fixed-bottom navbar-light bg-light">
-    <p >
+    <p>
       <div>
         <span class="text-info">*Petunjuk:</span>
         <span>Jika Kelipatannya 3 = <span class="text-success">Fizz</span></span>
